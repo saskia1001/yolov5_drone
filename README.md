@@ -27,8 +27,8 @@ In the next step of the project, a Docker image will be provided. For the offici
 The training, validation and testing of the model can be found in the notebook called `fluffy_toy_YOLOv5.ipynb`.\
 \
 **Testing**:\
-To run a test of the object detection model on the test file `test.png`, run the following in the shell:\
-* `python detect.py --weights best.pt --img-size 416 --source test.png`\
+To run a test of the object detection model on the test file `test.jpg`, run the following in the shell:\
+* `python detect.py --weights best.pt --img-size 416 --source test.jpg`\
 
 \
 **Run real-time object detection with the drone**:\
