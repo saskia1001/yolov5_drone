@@ -3,7 +3,7 @@
 ![demo](demo.gif)
 
 ### **Project Description**
-This repository represents a project to perform real-time object detection on custom data on a [Tello](https://www.ryzerobotics.com/de/tello) drone. It was my final project at the [SPICED Data Science Bootcamp](https://www.spiced-academy.com/en/program/data-science).
+This repository represents a project to perform real-time object detection on custom data on a [Tello](https://www.ryzerobotics.com/de/tello) drone.
 
 To enable object detection, the official [YOLOv5](https://github.com/ultralytics/yolov5) model by [Ultralytics](https://www.ultralytics.com/) was trained on custom data. Be aware that the code base used here might be outdated as the repository of Ultralytics is under constant development. I hlighly recommend to use the official code base of [YOLOv5](https://github.com/ultralytics/yolov5). The code base used by this project is stored in folder `'/yolov5'`.
 
@@ -51,4 +51,4 @@ The drone can be controlled with the following keyboard commands:
 *Important step before the first usage*: Unfortunately, one pitfall is that the drone needs a wifi connection to enable control via the device. As the model is loaded of PyTorch Hub, make sure to run the program once with an internet connection. Thus, the model can run from the cache when connected to the drone.  
 
 ### **Final notes**
-The project is in progress and needs and not aligned with the developing code base of the official YOLOv5 repo.
+The project is in progress and needs and not aligned with the developing code base of the official YOLOv5 repo. The project was my final project at the [SPICED Data Science Bootcamp](https://www.spiced-academy.com/en/program/data-science).
