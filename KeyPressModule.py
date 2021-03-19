@@ -1,3 +1,7 @@
+'''
+Script enables keyboard input.
+'''
+
 import pygame
 
 def init():
