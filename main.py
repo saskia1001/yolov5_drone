@@ -1,12 +1,18 @@
+'''
+The script allows to control a Tello drone (SDK 2.0) and 
+streems the video feed to a device where a real-time object 
+detection runs on the feed.
+'''
+
 import numpy as np
 import cv2.cv2 as cv2
 import torch
 import time
 from PIL import Image
 import djitellopy as tello
-import KeyPressModule as kp  # Move KeyPressModule in the folder
+import KeyPressModule as kp
 
-# Custom trained model
+# Load model from PyTorch Hub
 model = torch.hub.load('ultralytics/yolov5', 
                         'custom', 
                         path_or_model='best.pt')  # Path to custom model weights
@@ -24,6 +30,18 @@ me.streamon()
 
 # Set control of drone
 def getKeyboardInput():
+    '''
+    Function allows the control of the drone via keyboard.
+
+        Parameters: 
+            none
+        Returns:
+            [lr, fb, ud, yv]: list of integers
+            lr: left, right
+            fb: forwards, backwards
+            ud: up, down
+            yv: yaw velocity
+    '''
     lr, fb, ud, yv = 0, 0, 0, 0
     speed = 50
 
@@ -44,7 +62,7 @@ def getKeyboardInput():
     if kp.getKey('e'): me.takeoff()
 
     if kp.getKey('z'):
-        cv2.imwrite(f'/Users/saskia/Dropbox/ELLA/Tello/Images/{time.time()}.jpg', img)
+        cv2.imwrite(f'{time.time()}.jpg', img)  # Choose path to store the image
         time.sleep(.3)
 
     if kp.getKey('x'):
