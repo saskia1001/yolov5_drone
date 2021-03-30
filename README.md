@@ -1,6 +1,7 @@
 ## **Real-time object detection of a drone video feed using YOLOv5**
 
 ![demo](demo.gif)
+![drone_flight](drone_flight.gif)
 
 ### **Project Description**
 This repository represents a project to perform real-time object detection on custom data on a [Tello](https://www.ryzerobotics.com/de/tello) drone.
